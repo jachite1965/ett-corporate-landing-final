@@ -473,7 +473,18 @@ function App() {
           © 2026 Estrategias Turísticas y Tecnológicas S.C. Todos los derechos
           reservados.
         </small>
-      </footer>
+        </footer>
+
+      <a
+        className="whatsapp-float"
+        href="https://wa.me/525630701846?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20ET%26T."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contactar a ET&T por WhatsApp"
+      >
+        <span className="whatsapp-icon">✆</span>
+        <span className="whatsapp-text">WhatsApp</span>
+      </a>
     </div>
   );
 }
