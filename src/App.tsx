@@ -1,7 +1,7 @@
 import logoEtt from './assets/logo-ett-optimizado.webp';
 import heroImage from './assets/hero-canva-v2-optimizado.webp';
 import './App.css';
-
+import teamHeart from './assets/equipo-corazon.png.png'
 const menuItems = [
   { label: 'Inicio', href: '#inicio' },
   { label: 'Quiénes somos', href: '#quienes-somos' },
@@ -340,7 +340,51 @@ function App() {
             </article>
           </div>
         </section>
+        <section id="equipo" className="section team-heart">
+  <img
+    src={teamHeart}
+    alt=""
+    className="team-heart-bg"
+    aria-hidden="true"
+  />
 
+  <div className="team-heart-overlay" />
+
+  <div className="team-heart-copy">
+    <p className="section-label">Equipo</p>
+
+    <h2>Un equipo con gran corazón.</h2>
+
+    <div className="red-line" />
+
+    <p>
+      ET&T está impulsada por personas que creen en las ideas, en el trabajo
+      serio y en el valor humano de cada proyecto. Somos un equipo cercano,
+      profesional y comprometido con transformar cultura, turismo y tecnología
+      en soluciones con impacto real.
+    </p>
+
+    <div className="team-roles">
+      <div className="team-role-card">
+        <span>Relaciones Comerciales</span>
+        <strong>Mario Galicia De Los Reyes</strong>
+        <p>Director de Relaciones Comerciales</p>
+      </div>
+
+      <div className="team-role-card">
+        <span>Administración y Finanzas</span>
+        <strong>Verónica Chincoya Teutli</strong>
+        <p>Directora de Administración y Finanzas</p>
+      </div>
+
+      <div className="team-role-card">
+        <span>Análisis y Tecnología</span>
+        <strong>Javier Chincoya Teutli</strong>
+        <p>Director de Análisis de Negocios y Nuevas Tecnologías</p>
+      </div>
+    </div>
+  </div>
+</section>
         <section id="contacto" className="section contact">
           <div>
             <p className="section-label">Contacto</p>
