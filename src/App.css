@@ -588,3 +588,56 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+/* === Halo animado visible sobre rutas del Hero ET&T === */
+
+.hero {
+  isolation: isolate;
+}
+
+.hero-copy {
+  z-index: 4;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 62%;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0.25;
+  background:
+    radial-gradient(circle at 58% 28%, rgba(207, 24, 26, 0.45), transparent 10%),
+    radial-gradient(circle at 72% 36%, rgba(255, 170, 70, 0.38), transparent 9%),
+    radial-gradient(circle at 84% 30%, rgba(58, 196, 198, 0.34), transparent 8%),
+    linear-gradient(115deg, transparent 48%, rgba(207, 24, 26, 0.42) 50%, transparent 54%),
+    linear-gradient(130deg, transparent 52%, rgba(255, 170, 70, 0.32) 54%, transparent 58%),
+    linear-gradient(145deg, transparent 57%, rgba(58, 196, 198, 0.3) 59%, transparent 63%);
+  background-size: 140% 140%;
+  background-position: 0% 50%;
+  mix-blend-mode: screen;
+  filter: blur(0.4px);
+  animation: ettRouteGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes ettRouteGlow {
+  0% {
+    opacity: 0.28;
+    background-position: 0% 50%;
+    transform: translate3d(-14px, 10px, 0);
+  }
+
+  100% {
+    opacity: 0.85;
+    background-position: 100% 42%;
+    transform: translate3d(18px, -12px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::after {
+    animation: none;
+  }
+}
