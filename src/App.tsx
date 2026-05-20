@@ -417,8 +417,9 @@ function App() {
 
           <form
   className="contact-form"
-  action="https://formspree.io/f/mvzykwjc"
+  action="https://formspree.io/f/mvzykwje"
   method="POST"
+  target="_blank"
 >
   <h3>Solicita una reunión estratégica</h3>
 
