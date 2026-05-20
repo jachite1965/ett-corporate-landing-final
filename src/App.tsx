@@ -415,17 +415,56 @@ function App() {
             </div>
           </div>
 
-          <form className="contact-form">
-            <h3>Solicita una reunión estratégica</h3>
-            <div className="form-row">
-              <input type="text" placeholder="Nombre" />
-              <input type="text" placeholder="Empresa o institución" />
-            </div>
-            <input type="email" placeholder="Correo" />
-            <input type="tel" placeholder="Teléfono" />
-            <textarea placeholder="Mensaje" rows={5}></textarea>
-            <button type="button">Enviar mensaje →</button>
-          </form>
+          <form
+  className="contact-form"
+  action="https://formspree.io/f/mvzykwjc"
+  method="POST"
+>
+  <h3>Solicita una reunión estratégica</h3>
+
+  <input
+    type="hidden"
+    name="_subject"
+    value="Nuevo mensaje desde el sitio web de ET&T"
+  />
+
+  <div className="form-row">
+    <input
+      type="text"
+      name="nombre"
+      placeholder="Nombre"
+      required
+    />
+
+    <input
+      type="text"
+      name="organizacion"
+      placeholder="Empresa o institución"
+    />
+  </div>
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Correo"
+    required
+  />
+
+  <input
+    type="tel"
+    name="telefono"
+    placeholder="Teléfono"
+  />
+
+  <textarea
+    name="mensaje"
+    placeholder="Mensaje"
+    rows={5}
+    required
+  ></textarea>
+
+  <button type="submit">Enviar mensaje →</button>
+</form>
         </section>
       </main>
 
